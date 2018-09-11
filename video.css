@@ -1,0 +1,18 @@
+.controls {
+  width: 720px;
+  height: 40px;
+  position: absolute;
+  left: 0px;
+  bottom: -40px;
+  background-color: #000;
+}
+.controls .switch {
+  width: 20px;
+  height: 20px;
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}

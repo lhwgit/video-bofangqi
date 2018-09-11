@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="player">
+        <video src="../mp4/chrome.mp4"></video>
+        <div class="controls">
+            <a href="javascript:;" class="switch fa fa-play"></a>
+            <a href="javascript:;" class="expand fa fa-expand"></a>
+            <div class="progress">
+                <div class="bar"></div>
+                <div class="loaded"></div>
+                <div class="elapse"></div>
+            </div>
+            <div class="time">
+                <span class="currentTime">00:00:00</span>
+                \
+                <span class="totalTime">00:00:00</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            // 获取播放器  点击实现播放和暂停
+            var video = $("video")[0];
+            $(".switch").on("click",function(){
+                if (video.paused){
+                    video.play();
+                }else{
+                    video.pause();
+                }
+                $(this).toggleClass("fa-play fa-pause");
+            });
+
+            //实现全屏操作
+            $(".expand").on("click",function(){
+                if (video.requestFullScreen){
+                    video.requestFullScreen();
+                }
+            })
+        })
+    </script>
+</body>
+</html>
